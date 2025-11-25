@@ -12,6 +12,7 @@ body {
   background: #fafafa;
   color: #222;
   line-height: 1.7;
+  text-align: center; /* Center all text */
 }
 
 /* Container width */
@@ -68,10 +69,16 @@ body {
   padding: 16px 0;
 }
 
+.nav .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
 .nav a {
   color: #fff;
   text-decoration: none;
-  margin-right: 25px;
   font-size: 1rem;
   font-weight: 500;
   transition: 0.3s ease;
@@ -86,11 +93,14 @@ body {
 -------------------------------*/
 .card {
   background: white;
-  padding: 30px;
+  padding: 35px;
   border-radius: 12px;
-  margin-bottom: 30px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
+  text-align: center; /* Center inside card */
 }
 
 .card:hover {
@@ -102,6 +112,7 @@ body {
   font-size: 1.8rem;
   color: #0d3b22;
   margin-bottom: 15px;
+  display: inline-block;
   border-left: 4px solid #0d3b22;
   padding-left: 10px;
 }
@@ -112,14 +123,17 @@ body {
   color: #333;
 }
 
+/* Center list items */
 .card ul {
-  margin-top: 10px;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
 }
 
 .card ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 1rem;
+  padding: 5px 0;
 }
 
 /* ------------------------------
@@ -150,12 +164,11 @@ footer p {
     font-size: 2rem;
   }
 
-  .nav a {
-    display: inline-block;
-    margin: 10px 10px;
+  .nav .container {
+    gap: 15px;
   }
 
   .card {
-    padding: 20px;
+    padding: 25px;
   }
 }
