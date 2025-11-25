@@ -1145,6 +1145,17 @@ window.addEventListener('scroll', () => {
     width: 100%;
   }
 }
+.hero {
+  background: url("hero-bg.jpg") center/cover no-repeat !important;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
 
 
 
