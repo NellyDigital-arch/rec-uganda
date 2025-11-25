@@ -171,4 +171,83 @@ footer p {
   .card {
     padding: 25px;
   }
+} 
+/* -------------------------------------
+   FONT OVERRIDE (Use Montserrat)
+--------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, p, a, li {
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal !important;
 }
+
+/* -------------------------------------
+   GLOBAL CENTER ALIGNMENT
+--------------------------------------*/
+body, .card, .container, section, .nav, footer {
+  text-align: center !important;
+}
+
+/* -------------------------------------
+   NAVIGATION CENTER FIX
+--------------------------------------*/
+.nav .container {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* -------------------------------------
+   CARD IMPROVEMENTS INSPIRED BY PAWMAC
+--------------------------------------*/
+.card {
+  width: 90% !important;
+  max-width: 800px !important;
+  margin: 30px auto !important;
+  border-radius: 12px !important;
+  padding: 35px !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08) !important;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.12) !important;
+}
+
+/* Headings override */
+.card h2 {
+  font-size: 1.9rem !important;
+  font-weight: 700 !important;
+  padding-left: 10px !important;
+  border-left: 4px solid #0d3b22 !important;
+  display: inline-block !important;
+}
+
+/* -------------------------------------
+   UL LIST CENTER FIX
+--------------------------------------*/
+.card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-top: 15px !important;
+}
+
+.card ul li {
+  padding: 6px 0 !important;
+  margin-bottom: 10px !important;
+}
+
+/* -------------------------------------
+   FOOTER IMPROVEMENT
+--------------------------------------*/
+footer {
+  background: #0d3b22 !important;
+  padding: 20px 0 !important;
+  color: white !important;
+}
+
+
+ 
