@@ -937,6 +937,38 @@ window.addEventListener('scroll', () => {
 });
 </script>
 */
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column">
+      <h3>Rwenzori Environment Connect - Uganda</h3>
+      <p>Promoting environmental conservation, sustainable development & empowered communities.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#management">Management</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Tel: <a href="tel:+256775488641">+256 775 488 641</a></p>
+      <p>Email: <a href="mailto:info@rec-ug.com">info@rec-ug.com</a></p>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">
+    © 2025 Rwenzori Environment Connect - Uganda. All rights reserved.
+  </p>
+</footer>
+
 
 
 
