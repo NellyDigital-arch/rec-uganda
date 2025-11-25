@@ -438,7 +438,62 @@ footer {
   }
 }
 
- 
+ /* ------------------------------
+   ACTIVITIES SECTION WITH IMAGES
+-------------------------------*/
+.activity-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.activity-item img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.activity-text {
+  text-align: left;
+  flex: 1;
+}
+
+.activity-text strong {
+  display: block;
+  font-weight: 700;
+  color: #0d3b22;
+  margin-bottom: 6px;
+}
+
+.activity-text span {
+  font-weight: 400;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Center on mobile */
+@media (max-width: 768px) {
+  .activity-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .activity-text {
+    text-align: center;
+  }
+
+  .activity-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 
 
 
