@@ -492,6 +492,37 @@ footer {
     height: auto;
   }
 }
+/* ------------------------------
+   NAV BAR BLOG LINK HIGHLIGHT
+-------------------------------*/
+.nav a[href="blog.html"] {
+  color: #90ffbd;           /* Highlight color */
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline on hover */
+.nav a[href="blog.html"]::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #90ffbd;
+  transition: width 0.3s ease;
+}
+
+.nav a[href="blog.html"]:hover::after {
+  width: 100%;
+}
+
+/* Optional: darken text color on hover */
+.nav a[href="blog.html"]:hover {
+  color: #00ff99;
+}
+
 
 
 
