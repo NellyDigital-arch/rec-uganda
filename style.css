@@ -21,6 +21,40 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+/* ----------------------------------------
+   BOLD HEADINGS / MAIN POINTS, REGULAR DETAILS
+-----------------------------------------*/
+
+/* Card section headings stay bold */
+.card h2, .card h3 {
+  font-weight: 700 !important; /* bold */
+  color: #0d3b22;
+}
+
+/* Main point in list bold */
+.card ul li strong {
+  font-weight: 700; /* bold main points */
+  color: #0d3b22;
+}
+
+/* Explanation text regular font */
+.card ul li span {
+  font-weight: 400; /* normal weight for explanations */
+  color: #333;
+}
+
+/* Paragraphs under headings regular */
+.card p {
+  font-weight: 400; /* normal for explanatory text */
+  color: #333;
+}
+
+/* Optional: spacing for clarity */
+.card ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
 
 /* ------------------------------
    HERO SECTION
@@ -364,6 +398,7 @@ footer {
 }
 
  
+
 
 
 
