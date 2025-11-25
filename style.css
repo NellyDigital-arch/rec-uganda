@@ -1,0 +1,344 @@
+/* === Root Variables === */
+:root{
+  --accent:#2b8a60;
+  --accent-light:#3fa878;
+  --dark:#0f1720;
+  --muted:#6b7280;
+  --bg:#f6faf6;
+  --card:#ffffff;
+  --radius:16px;
+  --shadow:0 6px 24px rgba(0,0,0,0.06);
+
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
+}
+
+/* === Header + Nav === */
+header{
+  padding:40px 20px 60px;
+  background:linear-gradient(180deg, rgba(43,138,96,0.15), transparent);
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* Center nav links horizontally */
+.nav .container{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  align-items:center;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:32px;
+  padding:6px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img{
+  width:60px;
+  height:60px;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.brand h1{
+  font-size:20px;
+  font-weight:700;
+}
+
+nav a{
+  margin-left:22px;
+  text-decoration:none;
+  font-weight:600;
+  color:var(--dark);
+  padding:6px 4px;
+  transition:0.25s ease;
+}
+
+nav a:hover{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+}
+
+/* === HERO === */
+.hero{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
+  min-height:60vh;
+  padding:60px 20px;
+  background:linear-gradient(180deg, rgba(43,138,96,0.10), rgba(255,255,255,0.00));
+}
+
+.hero .container h1{
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:8px;
+  line-height:1.05;
+}
+.hero .tagline{
+  color:var(--muted);
+  max-width:760px;
+  font-size:18px;
+  margin:0 auto;
+}
+
+.hero-card{
+  background:var(--card);
+  padding:32px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  animation:fadeUp .7s ease forwards;
+}
+
+.hero h2{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.cta{
+  background:var(--accent);
+  color:white;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.25s;
+}
+
+.cta:hover{
+  background:var(--accent-light);
+  transform:translateY(-2px);
+}
+
+.hero-aside img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+/* Style inline SVG used in hero-aside */
+.hero-aside .decor-svg{
+  width: 360px;
+  height: auto;
+  max-width: 92%;
+  display:block;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+/* === MAIN LAYOUT === */
+/* Single-column centered main layout (stack sections vertically) */
+main{
+  margin:40px 0;
+  display:block;
+  width:100%;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* === POSTS / BLOG CARDS === */
+.post{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  transition:0.3s ease;
+}
+
+/* Constrain and center generic card sections for a professional centered layout */
+.card{
+  max-width:900px;
+  margin:18px auto;
+  text-align:center;
+}
+
+.post:hover{
+  transform:translateY(-3px);
+}
+
+.post img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:14px;
+}
+
+.post-meta{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:8px;
+  font-size:13px;
+}
+
+.post h3{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.post p{
+  color:var(--muted);
+}
+
+.readmore{
+  margin-top:12px;
+  display:inline-block;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:700;
+  transition:0.25s ease;
+}
+
+.readmore:hover{
+  letter-spacing:1px;
+}
+
+/* === SIDEBAR CARDS === */
+aside .card{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  margin-bottom:20px;
+}
+
+.list{
+  margin-left:18px;
+  color:var(--muted);
+}
+
+.contact a{
+  text-decoration:none;
+  color:var(--dark);
+  margin-top:4px;
+}
+
+.contact a:hover{
+  color:var(--accent);
+}
+
+/* === FOOTER === */
+footer{
+  padding:40px 20px;
+  margin-top:40px;
+  border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.social a{
+  text-decoration:none;
+  color:var(--accent);
+  margin-right:14px;
+  transition:0.25s ease;
+}
+
+.social a:hover{
+  color:var(--accent-light);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width:900px){
+  .hero{
+    padding:40px 16px;
+  }
+  main{
+    width:100%;
+    padding:0 16px;
+  }
+}
+
+/* Center key page sections (match IDs used in `index.html`) */
+#about,
+#activities,
+#management,
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Center only the Mission heading inside #about (keeps semantic structure) */
+#about h3{
+  margin-top: 18px;
+}
+
+/* Make sure Background/Mission appear visually above Management */
+#about{
+  margin-bottom: 28px;
+}
+
+/* Give Management a clear separation from the section above */
+#management{
+  margin-top: 8px;
+  padding-bottom: 18px;
+}
+
+/* Style nested cards inside #management so they read as subsections */
+#management > .card{
+  box-shadow: none;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 18px;
+  margin-top: 18px;
+  border-radius: 12px;
+}
+
+/* Center footer copyright text */
+footer .container{
+  text-align: center;
+}
+
+footer p{
+  margin: 0;
+}
