@@ -248,6 +248,10 @@ footer {
   padding: 20px 0 !important;
   color: white !important;
 }
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+}
 
 
  
+
