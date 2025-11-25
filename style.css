@@ -937,37 +937,70 @@ window.addEventListener('scroll', () => {
 });
 </script>
 */
-<footer class="site-footer">
-  <div class="footer-container">
-    
-    <div class="footer-column">
-      <h3>Rwenzori Environment Connect - Uganda</h3>
-      <p>Promoting environmental conservation, sustainable development & empowered communities.</p>
-    </div>
+/* --- Footer Styling --- */
+.site-footer {
+  background: #0b1e13;
+  color: #e8f5ee;
+  padding: 50px 20px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
 
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#activities">Activities</a></li>
-        <li><a href="#management">Management</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </div>
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    <div class="footer-column">
-      <h4>Contact</h4>
-      <p>Tel: <a href="tel:+256775488641">+256 775 488 641</a></p>
-      <p>Email: <a href="mailto:info@rec-ug.com">info@rec-ug.com</a></p>
-    </div>
+.footer-column {
+  width: 250px;
+}
 
-  </div>
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #9fefc4;
+}
 
-  <p class="footer-bottom">
-    © 2025 Rwenzori Environment Connect - Uganda. All rights reserved.
-  </p>
-</footer>
+.footer-column p,
+.footer-column li,
+.footer-column a {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 6px 0;
+}
+
+.footer-column a {
+  color: #d9fbe8;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #7ee0b2;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #1c3a27;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
 
 
 
