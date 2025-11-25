@@ -177,3 +177,9 @@ footer a {
         padding: 4rem 1rem;
     }
 }
+:root {
+  --brand-green: #85975A;
+  --brand-green-light: #A0A56E;
+}
+
+
