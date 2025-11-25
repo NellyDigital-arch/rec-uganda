@@ -251,7 +251,67 @@ footer {
 .hero {
   background: url('images/hero-bg.jpg') center/cover no-repeat;
 }
+/* ------------------------------
+   HERO SECTION
+-------------------------------*/
+.hero {
+  position: relative;
+  background: url('hero-bg.jpg') center center / cover no-repeat;
+  height: 80vh; /* 80% of viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2; /* above overlay */
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero .tagline {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ------------------------------
+   RESPONSIVE HERO
+-------------------------------*/
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .tagline {
+    font-size: 1rem;
+  }
+}
 
 
  
+
 
