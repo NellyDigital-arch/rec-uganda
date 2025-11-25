@@ -98,9 +98,24 @@
   </footer>
 	<!-- Back to Top Button -->
 <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+<script>
+// Show button after scrolling down 200px
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    backToTopButton.style.opacity = '1';
+    backToTopButton.style.pointerEvents = 'auto';
+  } else {
+    backToTopButton.style.opacity = '0';
+    backToTopButton.style.pointerEvents = 'none';
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
