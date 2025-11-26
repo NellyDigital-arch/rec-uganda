@@ -26,51 +26,18 @@ ul {
     list-style: none;
 }
 
-/* ====== HERO SECTION ====== */
 .hero {
     position: relative;
     width: 100%;
     min-height: 90vh;
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    background: url('hero-bg.jpg') no-repeat center center / cover;
     display: flex;
-    justify-content: center; /* horizontal center */
-    align-items: center;     /* vertical center */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: #fff;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35); /* subtle overlay */
-    z-index: 1; /* behind text */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2; /* above overlay */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    max-width: 800px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin: 0;
-    color: #e0e0e0;
-}
 
 /* ====== NAVIGATION ====== */
 nav {
@@ -232,6 +199,196 @@ a:hover { color: var(--brand-green); }
 body {
     padding-top: 80px; /* so hero text isn’t hidden behind the nav */
 }
+/* ---------------------------------------
+   PAWMAC-STYLE HERO SECTION
+---------------------------------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background: url('hero-bg.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Soft PawMac gradient overlay + brightness */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.05),   /* light top */
+        rgba(0, 0, 0, 0.45)    /* deeper bottom, PawMac style */
+    );
+    z-index: 1;
+}
+
+/* Text container */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Title (PawMac uses bold luxury style) */
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.15;
+    text-transform: capitalize;
+}
+
+/* Subtitle — soft light grey like PawMac */
+.hero p {
+    font-size: 1.3rem;
+    color: #eaeaea;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* PawMac–style subtle fade animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive text */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1.05rem;
+    }
+}
+/* ==========================================
+   TRUE PAWMAC SAFARI–STYLE HERO SECTION
+========================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen hero */
+    background: url('hero-bg.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    animation: heroZoom 18s ease-in-out infinite;
+}
+
+/* Soft PawMac gradient overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.15),   /* top very light */
+        rgba(0, 0, 0, 0.40)    /* bottom darker */
+    );
+    z-index: 1;
+}
+
+/* Text container */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    margin-bottom: 0.7rem;
+    color: #ffffff;
+}
+
+/* Subtitle styling */
+.hero p {
+    font-size: 1.35rem;
+    color: #efefef;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* PawMac-style luxury accent line */
+.hero-content::before {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 3px;
+    background: #A1C957; /* PawMac signature green */
+    margin: 0 auto 1.5rem auto;
+    border-radius: 2px;
+}
+
+/* Background slow zoom animation */
+@keyframes heroZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Text fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile perfect scaling */
+@media (max-width: 768px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+        padding: 0 10px;
+    }
+
+    .hero-content::before {
+        width: 70px;
+    }
+}
+
 
 
 
