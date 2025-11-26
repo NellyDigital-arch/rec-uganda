@@ -1012,6 +1012,31 @@ body {
     display: none; /* hide hamburger on desktop */
   }
 }
+/* Desktop navbar centering */
+@media (min-width: 1024px) {
+  .navbar {
+    display: flex;
+    justify-content: center; /* Center the navbar horizontally */
+    align-items: center;
+    position: relative;
+  }
+
+  .navbar .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem; /* spacing between links */
+  }
+
+  .hamburger {
+    display: none; /* hide hamburger on desktop */
+  }
+}
+
 
 
 
