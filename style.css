@@ -181,5 +181,12 @@ footer a {
   --brand-green: #85975A;
   --brand-green-light: #A0A56E;
 }
+:root {
+  --brand-green: #85975A; /* the code you picked */
+}
+/* Example usage */
+.btn { background-color: var(--brand-green); }
+a:hover { color: var(--brand-green); }
+
 
 
