@@ -40,61 +40,96 @@ ul {
 
 
 /* ====== NAVIGATION ====== */
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Navbar styles */
+.navbar {
+  position: absolute; /* sits on top of hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* brand left, hamburger right on mobile */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95); /* white navbar */
+  z-index: 10; /* above hero content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2c3e50;
+/* Brand styling */
+.navbar .brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2c5f2d; /* PawMac-style green */
 }
 
-nav ul {
-    display: flex;
-    gap: 2rem;
+/* Nav links desktop */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-nav ul li a {
-    font-weight: 500;
-    transition: color 0.3s ease;
+.nav-links li a {
+  text-decoration: none;
+  color: #2c5f2d;
+  font-weight: 500;
+  position: relative;
 }
 
-nav ul li a:hover {
-    color: #1abc9c;
+.nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #2c5f2d;
+  bottom: -3px;
+  left: 0;
 }
-/* Hamburger */
+
+/* Hamburger menu (mobile) */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 1001; /* above nav links */
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.hamburger span {
-    height: 3px;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #2c5f2d;
+  transition: all 0.3s ease;
+}
+
+/* Mobile dropdown */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    background: #fff; /* white on hero */
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
 
-.navbar.scrolled .hamburger span {
-    background: #333; /* dark on white background */
-}
+  .nav-links.active {
+    max-height: 500px; /* expand dropdown */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    color: #2c5f2d;
+  }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -1349,6 +1384,7 @@ body {
 .leaves span:nth-child(3) { left: 50%; animation-duration: 12s; }
 .leaves span:nth-child(4) { left: 70%; animation-duration: 9s; }
 .leaves span:nth-child(5) { left: 85%; animation-duration: 11s; }
+
 
 
 
