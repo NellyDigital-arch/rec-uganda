@@ -988,6 +988,31 @@ body {
 .nav-links li a:hover::after {
     width: 100%;
 }
+/* Desktop only: min-width 768px */
+@media screen and (min-width: 768px) {
+  .navbar {
+    position: relative; /* relative on desktop, absolute only for mobile overlay */
+    justify-content: center; /* center the nav links */
+    background-color: transparent; /* no white background needed */
+    padding: 2rem 0; 
+    box-shadow: none;
+  }
+
+  .navbar .brand {
+    position: absolute; /* keep brand visible */
+    left: 2rem; /* far left */
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    display: none; /* hide hamburger on desktop */
+  }
+}
+
 
 
 
