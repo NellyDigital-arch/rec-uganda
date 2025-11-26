@@ -122,7 +122,7 @@
         <button type="submit">Subscribe</button>
       </form>
 
-      <a href="#" class="donate-btn">Donate</a>
+      <a href="#" class=" For donatations-btn">Donate</a>
     </div>
 
   </div>
@@ -147,29 +147,18 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
   navLinks.classList.toggle('active');
+  hamburger.classList.toggle('toggle');
 });
 </script>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('toggle');
-  });
-</script>
-</body>
-
-
 
 </body>
 </html>
+
 
 
 
