@@ -1271,6 +1271,10 @@ body {
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+.hero {
+  background-attachment: fixed; /* simple parallax effect */
+}
+
 
 
 
