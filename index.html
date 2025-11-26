@@ -155,24 +155,22 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 </script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('toggle');
-});
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('toggle');
+  });
+</script>
+</body>
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('toggle');
-});
 
 
 </body>
 </html>
+
 
 
 
