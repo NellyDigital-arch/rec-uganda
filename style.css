@@ -531,6 +531,61 @@ body {
         font-size: 0.9rem;
     }
 }
+/* Green hover underline for all nav links */
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* default color */
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px; /* distance from text */
+    background-color: #4CAF50; /* PawMac-style green */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #4CAF50; /* optional, matches underline */
+}
+/* Nav links base style */
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* default text color */
+    transition: color 0.3s ease;
+}
+
+/* Sliding underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px; /* distance from text */
+    background-color: #4CAF50; /* PawMac-style green */
+    transition: width 0.4s ease; /* smooth slide */
+}
+
+/* On hover: expand underline from left to right */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Optional: change text color on hover */
+.nav-links a:hover {
+    color: #4CAF50;
+}
 
 
 
