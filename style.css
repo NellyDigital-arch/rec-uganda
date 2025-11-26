@@ -628,6 +628,97 @@ body {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* hamburger left, brand right */
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #111; /* dark navbar */
+  position: relative;
+  z-index: 2000;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Brand */
+.brand {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Nav links (mobile dropdown) */
+.nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #111;
+  display: none;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4CAF50; /* PawMac green */
+  text-decoration: underline;
+}
+
+/* Hamburger animation when toggled */
+.hamburger.toggle div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.toggle div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive: show only hamburger on mobile */
+@media(min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 1.5rem;
+    background: none;
+  }
+  .nav-links li a:hover {
+    text-decoration: underline;
+  }
+}
+
 
 
 
