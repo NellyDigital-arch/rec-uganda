@@ -388,6 +388,83 @@ body {
         width: 70px;
     }
 }
+/* ==========================================
+   PAWMAC SAFARIS–STYLE NAVBAR
+========================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 1.2rem 0;
+    transition: all 0.35s ease;
+    display: flex;
+    justify-content: center;
+    background: transparent; /* Transparent over hero */
+    backdrop-filter: blur(4px);
+}
+
+.navbar.scrolled {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.8rem 0; /* Shrinks slightly like PawMac */
+}
+
+.navbar .container {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff; /* White on hero */
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled a {
+    color: #333333; /* Dark text when nav becomes white */
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background: #A1C957; /* PawMac green underline */
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #A1C957; /* Green tint on hover */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .navbar .container {
+        gap: 1.3rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 
