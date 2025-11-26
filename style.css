@@ -895,6 +895,86 @@ body {
   }
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Dark overlay over hero */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35); /* subtle overlay */
+    z-index: 1; /* behind text but above hero image */
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 2; /* above overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 800px;
+}
+
+/* Navbar sits on top of hero */
+.navbar {
+    position: absolute; /* overlay on hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95); /* slightly transparent white */
+    z-index: 3; /* above overlay & hero content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Navbar links style */
+.nav-links li a {
+    color: #333; /* dark text on white navbar */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Green hover + underline effect (PawMac style) */
+.nav-links li a:hover {
+    color: #3c9d3c; /* PawMac green */
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3c9d3c;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
 
 
 
