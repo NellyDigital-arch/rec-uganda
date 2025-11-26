@@ -15,28 +15,21 @@
   </div>
 </header>
 
-
 <nav class="navbar">
-  <div class="container">
-    <a href="index.html" class="logo">REC Uganda</a>
-
-    <!-- Hamburger -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Menu Links -->
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#activities">Activities</a>
-      <a href="#management">Management</a>
-      <a href="#contact">Contact</a>
-      <a href="blog.html">Blog</a>
-    </div>
+  <div class="logo">REC Uganda</div>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
+
 
 
   <main class="container">
@@ -162,10 +155,18 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 </script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('toggle');
+});
 
 
 </body>
 </html>
+
 
 
 
