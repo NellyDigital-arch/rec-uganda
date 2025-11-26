@@ -1,4 +1,9 @@
 /* ====== GLOBAL RESET ====== */
+:root {
+  --forest-green: #134A34;
+  --safari-green: #85A86D;
+  --accent-green: #A9C9A2;
+}
 * {
     margin: 0;
     padding: 0;
@@ -187,6 +192,7 @@ footer a {
 /* Example usage */
 .btn { background-color: var(--brand-green); }
 a:hover { color: var(--brand-green); }
+
 
 
 
