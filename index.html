@@ -2,12 +2,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<script>
+  // Ensure page always loads at the top
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual'; // disable automatic scroll restoration
+  }
+  window.scrollTo(0, 0); // force top on load
+</script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rwenzori Environment Connect - Uganda</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+	
 <header class="hero">
   <div class="container">
     <h1>Rwenzori Environment Connect - Uganda</h1>
@@ -155,6 +164,13 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('toggle');
 });
 </script>
+		<script>
+  // Scroll to top on page reload
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+
 <script>
   // 1️⃣ Always scroll to top on page reload
   window.onbeforeunload = function () {
@@ -187,9 +203,40 @@ hamburger.addEventListener('click', () => {
     });
   });
 </script>
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('toggle');
+  });
+
+  // Always scroll to top on page reload
+  window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+  });
+</script>
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('toggle');
+  });
+
+  // Smooth scroll to top on page reload
+  window.addEventListener('beforeunload', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
