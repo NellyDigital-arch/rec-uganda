@@ -193,6 +193,43 @@ footer a {
 .btn { background-color: var(--brand-green); }
 a:hover { color: var(--brand-green); }
 
+/* ===== NAV BAR UPGRADE ===== */
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    backdrop-filter: blur(6px); /* subtle luxury effect */
+}
+
+.nav .container {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #134A34; /* deep safari green */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+    color: #85A86D; /* safari mid-green */
+    border-bottom: 2px solid #85A86D;
+}
+
 
 
 
